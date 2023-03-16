@@ -6,7 +6,7 @@ function getRndNumber(min, max) {
 
 //FUNZIONE PER SOMMARE DUE NUMERI
 function addNumbers (num1, num2) {
-  return num1+num2;
+  return parseInt(num1+num2);
 }
 
 //FUNZIONE PER CONTROLARE SE UN NUMERO É PARI O DISPARI
@@ -17,4 +17,12 @@ function oddOrEven(num) {
   else {
     return "odd";
   }
+}
+
+function wait(ms){
+  var start = new Date().getTime();
+  var end = start;
+  while(end < start + ms) {
+    end = new Date().getTime();
+ }
 }

@@ -1,0 +1,15 @@
+@keyframes append-animate {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}}
+
+.toshow {
+    overflow:hidden;
+    animation:append-animate 1s linear;
+}
+
