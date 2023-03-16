@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <title>Pari OR Dispari</title>
 </head>
 
@@ -20,12 +19,23 @@
                 <p class="text-center">Scegli un numero da 1 a 5, seleziona Pari o Dispari e attendi la mossa del computer!
                 </p>
                 <div class="input-group mb-3">
-                  
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Numero</span>
+                        <input id="user-number" type="number" min="1" max="5" class="form-control">
+                      </div>
+
+                      <div class="input-group">
+                        <select class="form-select" id="select-oddeven" >
+                          <option selected>Pari o dispari?</option>
+                          <option value="pari">Pari</option>
+                          <option value="dispari">Dispari</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" id="play-button" type="button">Gioca</button>
+                      </div>
 
                 </div>
-                <div class="text-center">
-                    <p id="result"></p>
-                </div>
+             
 
 
             </div>
@@ -33,6 +43,8 @@
     </div>
 </body>
 
-<script src="paridispari.js"></script>
+<script src="js/paridispari.js"></script>
+<script src="js/utility.js"></script>
+
 
 </html>
