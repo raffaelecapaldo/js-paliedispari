@@ -15,7 +15,6 @@ function checkValidity() { //Controlla che l'input non sia una stringa vuota o u
     }
 
     else {
-        checkButton.disabled = false;
         checkButton.classList.remove("disabled");
 
     }
@@ -23,7 +22,8 @@ function checkValidity() { //Controlla che l'input non sia una stringa vuota o u
 }
 
 function reverseString(str) {//Data una stringa la restituisce al contrario
-    return str.split('') // Separa ogni lettera della parola
+    
+    return str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '').split('') // Separa ogni lettera della parola
     .reverse()  //Inverti l'ordine delle lettere
     .join('');// Riuniscile assieme
 }
@@ -31,7 +31,7 @@ function reverseString(str) {//Data una stringa la restituisce al contrario
 
 function checkPalindrome() {//Controlla se è palindroma
     const reverseWorld = reverseString(world.value);//Prendi il valore dell'input e manipolalo con la funzione
-    if (world.value === reverseWorld) {//Se il risultato coincide con la parola inserita = palindroma
+    if (world.value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '') === reverseWorld) {//Se il risultato (con ogni carattere diverso da alfabeto e numeri 0-9 rimossi) coincide con la parola inserita = palindroma
         result.innerHTML = `<span class="text-success fs-5 fw-bold">La parola è palindroma!</span>`;
     }
     else {
