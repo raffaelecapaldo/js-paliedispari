@@ -13,6 +13,28 @@ buttonPlay.addEventListener ("click", playGame);
 
 function playGame() {
     const pcNumber = getRndNumber(1,5);
-    addNumbers(userNumber,pcNumber);
-    
+    console.log(pcNumber)
+    const sumNumbers = addNumbers(parseInt(userNumber.value),parseInt(pcNumber));
+    console.log(sumNumbers)
+
+    const checkedOddEven = oddOrEven(sumNumbers);
+    console.log(checkedOddEven)
+ 
+    if (evenOrOdd.value == "even") {
+        if (checkedOddEven === evenOrOdd.value) {
+            console.log("Hai vinto");
+        }
+        else {
+            console.log("Hai perso");
+        }
+    }
+
+    if (evenOrOdd.value == "odd") {
+        if (checkedOddEven === evenOrOdd.value) {
+            console.log ("Hai vinto");
+        }
+        else {
+            console.log("Hai perso");
+        }
+    }
 }
