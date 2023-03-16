@@ -43,7 +43,7 @@ if (evenOrOdd.value == "odd") {//Come sopra ma con DISPARI
 
 
 function checkCanPlay() {
-    if (isNaN(userNumber.value) || parseInt(userNumber.value) < 1 || parseInt(userNumber.value) > 5 || evenOrOdd.value === "") {
+    if (isNaN(userNumber.value) || !userNumber.value || parseInt(userNumber.value) < 1 || parseInt(userNumber.value) > 5 || evenOrOdd.value === "") {
 
 
         buttonPlay.classList.add("disabled");
