@@ -35,7 +35,9 @@ function checkPalindrome() {//Controlla se è palindroma
         result.innerHTML = `<span class="text-success fs-5 fw-bold">La parola è palindroma!</span>`;
     }
     else {
-        result.innerHTML = `<span class="text-danger fs-5 fw-bold">La parola non è palindroma!</span>`;
+        result.innerHTML = `<span class="text-danger fs-5 fw-bold">La parola non è palindroma!</span>
+        <p class="text-uppercase text-primary fs-4 fw-bold">senso inverso: ${reverseWorld}`;
     }
+    console.log(reverseWorld);
 }
 
